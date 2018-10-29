@@ -1,9 +1,12 @@
 package subsystem;
 
-import net.dv8tion.jda.*;
+import net.dv8tion.jda.core.entities.Message;
+import net.dv8tion.jda.core.entities.MessageChannel;
+import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+
 
 public class PingPong {
-    @Override
+    
     public void onMessageReceived(MessageReceivedEvent event)
     {
         if (event.getAuthor().isBot()) return;
