@@ -20,7 +20,7 @@ public class PointManager extends ListenerAdapter {
         String userId = event.getAuthor().getId();
         // getContentRaw() is an atomic getter
         // getContentDisplay() is a lazy getter which modifies the content for e.g. console view (strip discord formatting)
-        System.out.println("userId: " + userId);
+        
         if (upds.isUserInDataStore(userId)){
             upds.addPoints(userId.toString(), 1);
         } else {
