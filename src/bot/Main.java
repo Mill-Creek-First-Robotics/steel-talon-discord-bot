@@ -12,10 +12,14 @@ public class Main {
         //
         // Initialization
         //
-        
+        JDA jda = null;
         // Connect to Discord
-        // TODO: Keep the bot token only on the server.
-        JDA jda = new JDABuilder("NTA2NTM5ODIwNzE4NDg5NjEw.DrjpLw.TxLhECMBuOjX5I3ifawtn0KPbLM").build();
+        if (args.length > 0) jda = new JDABuilder(args[0]).build();
+        else {
+            System.out.println("You need to pass a bot token as an argument!");
+            return;
+        }
+        
         jda.awaitReady();
         System.out.println("Connected to Discord!");
         
