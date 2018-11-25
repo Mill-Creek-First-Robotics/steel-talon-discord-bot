@@ -23,7 +23,7 @@ public class PingPong extends ListenerAdapter {
             channel.sendMessage("Pong!").queue(); // Important to call .queue() on the RestAction returned by sendMessage(...)
         }
         
-        if (content.equals("!King"))
+        if (content.equals("!king"))
         {
             MessageChannel channel = event.getChannel();
             channel.sendMessage("Kong!").queue(); // Important to call .queue() on the RestAction returned by sendMessage(...)
