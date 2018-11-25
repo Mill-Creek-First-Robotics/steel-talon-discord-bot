@@ -1,11 +1,13 @@
 package subsystem;
 
+import net.dv8tion.jda.core.hooks.ListenerAdapter;
 import net.dv8tion.jda.core.entities.Message;
 import net.dv8tion.jda.core.entities.MessageChannel;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
 
-public class PingPong {
+
+public class PingPong extends ListenerAdapter {
     
     public void onMessageReceived(MessageReceivedEvent event)
     {
@@ -19,6 +21,12 @@ public class PingPong {
         {
             MessageChannel channel = event.getChannel();
             channel.sendMessage("Pong!").queue(); // Important to call .queue() on the RestAction returned by sendMessage(...)
+        }
+        
+        if (content.equals("!King"))
+        {
+            MessageChannel channel = event.getChannel();
+            channel.sendMessage("Kong!").queue(); // Important to call .queue() on the RestAction returned by sendMessage(...)
         }
     }
 }
