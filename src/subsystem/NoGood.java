@@ -13,7 +13,7 @@ public class NoGood extends ListenerAdapter {
          Message message = event.getMessage();
          String content = message.getContentRaw();
          
-         if (content.equals("!nogood"))
+         if (content.equals("!nogood") || content.equals("no good"))
          {
              MessageChannel channel = event.getChannel();
              int num = (int)(Math.round(Math.random() * 5) + 1);
