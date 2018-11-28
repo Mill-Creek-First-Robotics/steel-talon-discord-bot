@@ -6,7 +6,7 @@ import net.dv8tion.jda.core.entities.MessageChannel;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
 public class NoGood extends ListenerAdapter {
-    public void MessageRecieved(MessageReceivedEvent event) {
+    public void onMessageReceived(MessageReceivedEvent event) {
         
         if (event.getAuthor().isBot()) return;
         //botception is bad
@@ -15,7 +15,7 @@ public class NoGood extends ListenerAdapter {
          
          if (content.equals("!nogood"))
          {
-             MessageChannezl channel = event.getChannel();
+             MessageChannel channel = event.getChannel();
              int num = (int)(Math.round(Math.random() * 5 + 1));
              //^^ random number generator
              switch(num)//sends a message based off of "num"
