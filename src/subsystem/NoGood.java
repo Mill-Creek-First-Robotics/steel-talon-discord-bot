@@ -16,7 +16,7 @@ public class NoGood extends ListenerAdapter {
          if (content.equals("!nogood"))
          {
              MessageChannel channel = event.getChannel();
-             int num = (int)(Math.round(Math.random() * 5 + 1));
+             int num = (int)(Math.round(Math.random() * 5) + 1);
              //^^ random number generator
              switch(num)//sends a message based off of "num"
              {
