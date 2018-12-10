@@ -18,7 +18,7 @@ public class SwearBin extends ListenerAdapter {
         if (event.getAuthor().isBot()) return;
         // We don't want to respond to other bot accounts, including ourself
         Message message = event.getMessage();
-        String content = message.getContentRaw(); 
+        String content = message.getContentRaw().toLowerCase(); // We don't want swears to be case sensitive.
         // getContentRaw() is an atomic getter
         // getContentDisplay() is a lazy getter which modifies the content for e.g. console view (strip discord formatting)
         for (int i = 0; i < badWords.length; i++) {
@@ -26,11 +26,6 @@ public class SwearBin extends ListenerAdapter {
 	            MessageChannel channel = event.getChannel();
 	            channel.sendMessage("Hey! Do you kiss your mother with that keyboard?").queue(); // Important to call .queue() on the RestAction returned by sendMessage(...)
 	        }
-        }
-        if (content.equals("!king"))
-        {
-            MessageChannel channel = event.getChannel();
-            channel.sendMessage("Kong!").queue(); // Important to call .queue() on the RestAction returned by sendMessage(...)
         }
     }
 }
