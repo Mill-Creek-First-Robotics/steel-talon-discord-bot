@@ -6,6 +6,7 @@ import net.dv8tion.jda.core.JDABuilder;
 import subsystem.PingPong;
 import subsystem.PointManager;
 import subsystem.NoGood;
+import subsystem.SwearBin;
 
 public class Main {
 
@@ -27,6 +28,7 @@ public class Main {
         // Attach Event Listeners
         jda.addEventListener(new PingPong());
         jda.addEventListener(new PointManager());
+        jda.addEventListener(new SwearBin());
         jda.addEventListener(new NoGood());
         
         System.out.println("Listeners attached!");
