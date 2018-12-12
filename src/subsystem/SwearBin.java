@@ -10,8 +10,9 @@ import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 public class SwearBin extends ListenerAdapter {
     
 	private String[] badWords = {
-			"fuck","shit","damn","minorities","nigg","chink","dammit"
+			"fuck","shit","damn","minorities","nigg","chink","dammit","gaymer","owo","uwu","yiff","hentai","loli","shota","bomboclat","boku no pico","nigeria","africa","chris","jason","vesper","cheesecakecg","roblox" 
 	};
+		
 		
 	
     public void onMessageReceived(MessageReceivedEvent event) {
